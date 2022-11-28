@@ -2,6 +2,8 @@
 
 export(cum_variance_proportion)
 export(make_cluster)
+export(plot_labelled_cluster_bars)
+export(plot_pca)
 export(scree_plot)
 export(tot_within_var_plot)
 export(variance_proportion)
