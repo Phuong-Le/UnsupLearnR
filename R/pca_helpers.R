@@ -35,4 +35,4 @@ variance_proportion = function(pc_dataframe,pc_number=NULL) {
 #' @export
 cum_variance_proportion = function(pc_dataframe,pc_number=NULL) {
   var_prop = variance_proportion(pc_dataframe,pc_number=NULL)
-  return(cumsum(c(0,var_prop)))}
+  return(cumsum(var_prop))}
