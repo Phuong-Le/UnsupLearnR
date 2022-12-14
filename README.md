@@ -140,7 +140,7 @@ set.seed(NULL)
 # total variation within clusters measures how far away datapoints are from their centers
 # as K increases, it always decreases
 # A good K is one where you see a kink
-# here the decrease from 3 to 4 is tiny compared to 4-5, suggesting that 3 is a good K value
+# here the decrease from 3 to 4 is tiny compared to 2 to 3, suggesting that 3 is a good K value
 tot_within_var_plot(clusters = clusters) + 
   scale_x_continuous(n.breaks = n_clusters)
 ```
