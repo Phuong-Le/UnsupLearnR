@@ -25,7 +25,11 @@ The goal of UnsupLearnR is to assist with unsupervised learning in R - particula
 You can install the development version of UnsupLearnR like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+if (!require("devtools")) install.packages("devtools")
+if (!require("graphicsPLr")) devtools::install_github('Phuong-Le/graphicsPLr')
+
+# the package
+devtools::install_github('Phuong-Le/UnsupLearnR')
 ```
 
 ## Example
@@ -59,7 +63,9 @@ params = data.frame(param=iris$Species)
 plot_pca(pca_ed, params = params)
 
 # it's worth looking at the loadings plot, let's use fviz_pca_var from factoextra package (I think it does a really good job so I don't think I need to write a similar function in UnsupLearnR)
-fviz_pca_var(pca)
+library(ggpubr)
+fviz_pca_var(pca) +
+  theme_pubr()
 
 # you can also choose the dimensions (principle components) on the x and y axis 
 plot_pca(pca_ed, param = params, x = 2, y= 3)

@@ -14,7 +14,11 @@ particularly with visualisation.
 You can install the development version of UnsupLearnR like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+if (!require("devtools")) install.packages("devtools")
+if (!require("graphicsPLr")) devtools::install_github('Phuong-Le/graphicsPLr')
+
+# the package
+devtools::install_github('Phuong-Le/UnsupLearnR')
 ```
 
 ## Example
@@ -71,7 +75,9 @@ plot_pca(pca_ed, params = params)
 ``` r
 
 # it's worth looking at the loadings plot, let's use fviz_pca_var from factoextra package (I think it does a really good job so I don't think I need to write a similar function in UnsupLearnR)
-fviz_pca_var(pca)
+library(ggpubr)
+fviz_pca_var(pca) +
+  theme_pubr()
 ```
 
 <img src="man/figures/README-pca-2.png" width="100%" />
