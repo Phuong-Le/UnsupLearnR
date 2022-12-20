@@ -14,7 +14,11 @@ particularly with visualisation.
 You can install the development version of UnsupLearnR like so:
 
 ``` r
-if (!require("devtools")) install.packages("devtools")
+# install pacman
+if (!require("pacman")) install.packages("pacman")
+# install dependencies from CRAN
+pacman::p_install(devtools, ggplot2, ggpubr)
+# install graphicsPLr from GitHub
 if (!require("graphicsPLr")) devtools::install_github('Phuong-Le/graphicsPLr')
 
 # the package
