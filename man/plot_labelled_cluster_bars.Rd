@@ -6,7 +6,7 @@
 \usage{
 plot_labelled_cluster_bars(
   cluster,
-  label,
+  param,
   used_cols = NULL,
   used_shapes = NULL
 )
@@ -14,12 +14,12 @@ plot_labelled_cluster_bars(
 \arguments{
 \item{cluster}{result from make_cluster}
 
-\item{label}{a dataframe with 1 column indicating the categorical label of interest, with colname being 'label', rownames should be compatible with those of cluster}
+\item{param}{a dataframe with 1 column indicating the categorical label of interest, with colname being 'param', rownames should be compatible with those of cluster}
 
 \item{used_cols}{(optional) the colours of the clusters}
 }
 \value{
-a ggplot barplot with labels on the x axis and coloured by the clusters
+a ggplot barplot with param labels on the x axis and coloured by the clusters
 }
 \description{
 barplot of clusters that's been labelled
